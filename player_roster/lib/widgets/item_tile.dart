@@ -30,10 +30,10 @@ class ItemTile extends StatelessWidget {
               ClipRRect(
                 // ClipRRect: to give the image rounded corners
                 borderRadius: BorderRadius.circular(8),
-                child: item.imageUrl.isNotEmpty
+                child: item.thumbUrl.isNotEmpty
                     ? Image.asset(
                         // Image from assets
-                        item.imageUrl,
+                        item.thumbUrl,
                         width: 80,
                         height: 80,
                         fit: BoxFit.cover,
@@ -50,7 +50,7 @@ class ItemTile extends StatelessWidget {
                         ),
                       )
                     : Container(
-                        // Placeholder when imageUrl is empty
+                        // Placeholder when thumbUrl is empty
                         width: 80,
                         height: 80,
                         color: Colors.grey[200],
