@@ -30,24 +30,36 @@ class ItemTile extends StatelessWidget {
               ClipRRect(
                 // ClipRRect: to give the image rounded corners
                 borderRadius: BorderRadius.circular(8),
-                child: Image.network(
-                  // Image from network
-                  item.imageUrl,
-                  width: 80,
-                  height: 80,
-                  fit: BoxFit.cover,
-                  errorBuilder: (context, error, stack) => Container(
-                    // Placeholder on error
-                    width: 80,
-                    height: 80,
-                    color: Colors.grey[200],
-                    child: const Icon(
-                      Icons.broken_image,
-                      size: 32,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ),
+                child: item.imageUrl.isNotEmpty
+                    ? Image.asset(
+                        // Image from assets
+                        item.imageUrl,
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stack) => Container(
+                          // Placeholder on error
+                          width: 80,
+                          height: 80,
+                          color: Colors.grey[200],
+                          child: const Icon(
+                            Icons.broken_image,
+                            size: 32,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      )
+                    : Container(
+                        // Placeholder when imageUrl is empty
+                        width: 80,
+                        height: 80,
+                        color: Colors.grey[200],
+                        child: const Icon(
+                          Icons.image,
+                          size: 32,
+                          color: Colors.grey,
+                        ),
+                      ),
               ),
               const SizedBox(width: 12), // Spacing between image and text
               Expanded(

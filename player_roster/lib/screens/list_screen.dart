@@ -12,6 +12,8 @@ class ListScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Player Roster')),
       body: ListView.builder(
         // Using ListView.builder for efficient list rendering (mentioned in lab description)
+        itemCount: sampleItems
+            .length, // Number of items in the list - it should match the sample data length
         itemBuilder: (context, index) {
           final item = sampleItems[index]; // Get item from sample data
           return ItemTile(
