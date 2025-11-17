@@ -1,16 +1,23 @@
 # player_roster
 
-A new Flutter project.
+## Division of Work
 
-## Getting Started
+- Barbod Habibi
+  - Polished UI and made layouts responsive
+  - Refactored list model and added images, thumbnails, and item descriptions
 
-This project is a starting point for a Flutter application.
+- Mehrshad Farahbakhsh
+  - Built the details page UI using Flutter widgets
+  - Implemented app navigation and data passing with named routes
 
-A few resources to get you started if this is your first Flutter project:
+- Amirhossein Mansouri
+  - Implemented the list view using ListView.builder
+  - Set up the item model and integrated it into the list builder
+ 
+## Comparison to Android Studio
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- List creation was easier in Flutter thanks to `ListView.builder`, compared to adapters in Android
+- Navigation and data passing felt simpler in Flutter than dealing with intents
+- Flutter’s layouts were more flexible, though sometimes a bit widget-heavy
+- Flutter had less boilerplate overall and faster iteration with hot reload
+- Performance felt smoother in Flutter, while Android was a bit slower to update
